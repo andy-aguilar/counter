@@ -6,9 +6,15 @@ export default class App extends Component {
     count: 0
   }
 
-  handleClick = () => {
+  handleAddClick = () => {
     this.setState({
       count: this.state.count + 1
+    })
+  }
+
+  handleSubClick = () => {
+    this.setState({
+      count: this.state.count - 1
     })
   }
 
@@ -16,7 +22,8 @@ export default class App extends Component {
     return (
       <div>
         <h1>{this.state.count}</h1>
-        <button onClick={this.handleClick}>Count</button>
+        <button onClick={this.handleAddClick}>+</button>
+        <button onClick={this.handleSubClick}>-</button>
       </div>
     )
   }
